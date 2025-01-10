@@ -28,7 +28,6 @@
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>詳細</th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
