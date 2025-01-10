@@ -38,9 +38,8 @@
                             <input type="text" class="form-control" id="detail" name="detail" placeholder="詳細説明">
                         </div>
                     </div>
-
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">登録</button>
+                    <div class="card-footer">  
+                        <button type="submit" class="btn btn-primary me-2">登録</button>
                     </div>
                 </form>
             </div>

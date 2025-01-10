@@ -51,7 +51,15 @@ class ItemController extends Controller
 
             return redirect('/items');
         }
-
         return view('item.add');
     }
+
+    /**商品情報の削除 */
+    public function delete($id)
+    {
+        $item = Item::find($id);
+        $item->delete($id);
+        return redirect('/items');
+    }
+
 }
