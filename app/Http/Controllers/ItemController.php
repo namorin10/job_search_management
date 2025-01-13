@@ -41,6 +41,12 @@ class ItemController extends Controller
                 'name' => 'required|max:100',
                 'type' => 'required|max:50',
                 'detail' => 'required|max:100',
+            ], ['name.required' => '名前を入力してください。',
+                'name.max' => '名前を100文字以内で入力してください。',
+                'type.required' => '種別を入力してください。',
+                'type.max' => '種別を50文字以内で入力してください。',
+                'detail.required' => '詳細を入力してください。',
+                'detail.max' => '詳細を100文字以内で入力してください。',
             ]);
 
             // 商品登録
