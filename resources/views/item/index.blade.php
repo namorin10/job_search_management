@@ -8,10 +8,7 @@
         color: blue;
         font-size: 20px;
     }
-    .delete-button{
-        color: red;
-        font-size: 20px;
-    }
+    
 </style>
 @endsection
 
@@ -67,7 +64,7 @@
                                     <td>
                                         <form action="/items/delete/{{$item->id}}" method="post">
                                         @csrf 
-                                            <button type="submit" class="delete-button" onclick="return confirm('削除してよろしいですか？')">削除</button>
+                                            <button type="submit" class="btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
                                         </form>
                                     </td>
                                 </tr>
