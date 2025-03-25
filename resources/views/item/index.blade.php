@@ -4,7 +4,7 @@
 
 @section('css')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-@endsection
+@stop
 
 @section('content_header')
     <h1>応募企業一覧</h1>
@@ -116,4 +116,6 @@
 @stop
 
 @section('js')
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 @stop
