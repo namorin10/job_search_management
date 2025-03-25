@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned()->index();
             $table->string('name', 100)->index();
-            $table->string('type', 100)->nullable();
-            $table->string('detail', 500)->nullable();
+            $table->string('preference', 500)->nullable();
+            $table->string('progress', 500)->nullable();
+            $table->string('good', 500)->nullable();
+            $table->string('bad', 500)->nullable();
+            $table->string('memo', 500)->nullable();
+            $table->string('url', 1000)->nullable();
             $table->timestamps();
         });
     }

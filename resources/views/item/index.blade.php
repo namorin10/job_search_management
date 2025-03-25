@@ -25,10 +25,10 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>名前</th>
-                                <th>種別</th>
-                                <th>詳細</th>]
-                                <th></th>
+                                <th>企業名</th>
+                                <th>志望度</th>
+                                <th>選考の進捗</th>
+                                <th>企業詳細</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,8 +46,11 @@
                                 <tr>
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->type }}</td>
-                                    <td>{{ $item->detail }}</td>
+                                    <td>{{ $item->preference }}</td>
+                                    <td>{{ $item->progress }}</td>
+                                    <td>
+                                        <button class="btn btn-primary">企業詳細</button>
+                                    </td>
                                     <td>
                                         <form action="/items/delete/{{$item->id}}" method="post">
                                         @csrf 
