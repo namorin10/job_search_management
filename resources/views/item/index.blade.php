@@ -3,13 +3,7 @@
 @section('title', '応募企業一覧')
 
 @section('css')
-<style>
-    .detail-button {
-        color: blue;
-        font-size: 20px;
-    }
-    
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 @endsection
 
 @section('content_header')
@@ -105,7 +99,7 @@
                                     <td>
                                         <form action="/items/delete/{{$item->id}}" method="post">
                                         @csrf 
-                                            <button type="submit" class="btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
                                         </form>
                                     </td>
                                 </tr>
