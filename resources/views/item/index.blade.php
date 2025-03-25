@@ -1,9 +1,22 @@
 @extends('adminlte::page')
 
-@section('title', '商品一覧')
+@section('title', '応募企業一覧')
+
+@section('css')
+<style>
+    .detail-button {
+        color: blue;
+        font-size: 20px;
+    }
+    .delete-button{
+        color: red;
+        font-size: 20px;
+    }
+</style>
+@endsection
 
 @section('content_header')
-    <h1>商品一覧</h1>
+    <h1>応募企業一覧</h1>
 @stop
 
 @section('content')
@@ -11,11 +24,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">商品一覧</h3>
+                    <h3 class="card-title">応募企業一覧</h3>
                     <div class="card-tools">
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
-                                <a href="{{ url('items/add') }}" class="btn btn-default">商品登録</a>
+                                <a href="{{ url('items/add') }}" class="btn btn-default">企業登録</a>
                             </div>
                         </div>
                     </div>
@@ -49,12 +62,12 @@
                                     <td>{{ $item->preference }}</td>
                                     <td>{{ $item->progress }}</td>
                                     <td>
-                                        <button class="btn btn-primary">企業詳細</button>
+                                        <button class="detail-button">企業詳細</button>
                                     </td>
                                     <td>
                                         <form action="/items/delete/{{$item->id}}" method="post">
                                         @csrf 
-                                            <button type="submit" class="btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
+                                            <button type="submit" class="delete-button" onclick="return confirm('削除してよろしいですか？')">削除</button>
                                         </form>
                                     </td>
                                 </tr>
