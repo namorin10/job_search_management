@@ -19,6 +19,7 @@ class Item extends Model
         'good',
         'bad',
         'memo',
+        'site_name',
         'url',
     ];
 

@@ -54,53 +54,57 @@
                                     <td>{{ $item->progress }}</td>
                                     <td>
                                         <div class="col-3">
-                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">企業詳細</button>
-                                                    <div class="modal fade" id="modal1" tabindex="-1" area-hidden="true">
+                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal{{ $item->id }}">企業詳細</button>
+                                                    <div class="modal fade" id="modal{{ $item->id }}" tabindex="-1" area-hidden="true">
                                                         <div class="modal-dialog modal-xl">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h2 class="modal-title">企業の詳細</h2>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
-                                                                <div class="modal-body">
+                                                                <div class="modal-body fs-3">
                                                                     <div class="row">
                                                                         <div class="col-4">企業名</div>
-                                                                        <div class="col-8">日本郵便</div>
+                                                                        <div class="col-8">{{ $item->name }}</div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-4">志望度</div>
-                                                                        <div class="col-8">2</div>
+                                                                        <div class="col-8">{{ $item->preference }}</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-4">選考の進捗</div>
+                                                                        <div class="col-8">{{ $item->progress }}</div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-4">良いところ</div>
-                                                                        <div class="col-8">ない</div>
+                                                                        <div class="col-8">{{ $item->good }}</div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-4">懸念点</div>
-                                                                        <div class="col-8">経営不振</div>
+                                                                        <div class="col-8">{{ $item->bad }}</div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-4">メモ</div>
-                                                                        <div class="col-8">あんまり行きたくない</div>
+                                                                        <div class="col-8">{{ $item->memo }}</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-4">元のサイト</div>
+                                                                        <div class="col-8">{{ $item->site_name }}</div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-4">URL</div>
-                                                                        <div class="col-8">日本郵便のURL</div>
+                                                                        <div class="col-8">
+                                                                            <a href="{{ $item->url }}">{{ $item->url }}</a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="modal-footer">
-                                                                    <a href="/recruit/edit" class="btn btn-primary">編集</a>
+                                                                <div class="modal-footer fs-4">
+                                                                    <a href="/edit/{{ $item->id }}" class="btn btn-primary">編集</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <form action="/items/delete/{{$item->id}}" method="post">
-                                        @csrf 
-                                            <button type="submit" class="btn btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
-                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

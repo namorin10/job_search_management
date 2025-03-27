@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('good', 500)->nullable();
             $table->string('bad', 500)->nullable();
             $table->string('memo', 500)->nullable();
+            $table->string('site_name', 500)->nullable();
             $table->string('url', 1000)->nullable();
             $table->timestamps();
         });
