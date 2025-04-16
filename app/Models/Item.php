@@ -11,6 +11,11 @@ class Item extends Model
      *
      * @var array<int, string>
      */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
     protected $fillable = [
         'user_id',
         'name',
