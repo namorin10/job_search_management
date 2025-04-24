@@ -64,14 +64,14 @@
                             <input type="text" class="form-control" id="url" name="url" value="{{ $item->url}}" placeholder="URLを変更する">
                         </div>
                     </div>
-                    <div class="card-footer">  
+                    <div class="card-footer d-flex gap-2">  
                         <button type="submit" class="btn btn-primary me-2">更新</button>
-                        <form action="/items/delete/{{$item->id}}" method="post">
-                            @csrf 
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
-                        </form>
-                    </div>
                 </form>
+                <form action="/items/delete/{{$item->id}}" method="post">
+                    @csrf 
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('削除してよろしいですか？')">削除</button>
+                </form>
+                    </div>
             </div>
         </div>
     </div>

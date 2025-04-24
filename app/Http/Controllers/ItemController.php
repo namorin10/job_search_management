@@ -119,7 +119,7 @@ class ItemController extends Controller
     public function delete($id)
     {
         $item = Item::find($id);
-        $item->delete($id);
+        $item->delete();
         return redirect('/items');
     }
 
