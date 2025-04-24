@@ -28,7 +28,6 @@
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>企業名</th>
                                 <th>志望度</th>
                                 <th>選考の進捗</th>
@@ -48,7 +47,6 @@
                             @endif
                             @foreach ($items as $item)
                                 <tr>
-                                    <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->preference }}</td>
                                     <td>{{ $item->progress }}</td>
