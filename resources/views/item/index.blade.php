@@ -60,7 +60,7 @@
                                                                     <h2 class="modal-title">企業の詳細</h2>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
-                                                                <div class="modal-body fs-3">
+                                                                <div class="modal-body fs-3 text-wrap">
                                                                     <div class="row">
                                                                         <div class="col-4">企業名</div>
                                                                         <div class="col-8">{{ $item->name }}</div>
